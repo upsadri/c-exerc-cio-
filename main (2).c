@@ -6,11 +6,14 @@ int main (){
    
     ///menu
     
-    printf ("====menu====\n");
-    printf ("soma\n");
-    printf ("subtracao\n");
-    printf ("multiplicacao\n");
-    printf("divisao\n");
+    printf ("====CALCULADORA====\n");
+    printf ("1- soma\n");
+    printf ("2- subtracao\n");
+    printf ("3- multiplicacao\n");
+    printf("4- divisao\n");
+    
+    printf ("Escolha a opcao");
+    scanf ("%d", &opcao);
     
      printf ("digite seu primeiro numero");
     scanf ("%f", &a);
@@ -21,10 +24,26 @@ int main (){
     
     if (opcao == 1){
         resultado = a + b;
-        printf("resultado %f", resultado);
+        printf("resultado = %.2f", resultado);
     }
     else if (opcao == 2){
+        resultado = a-b;
+        printf("resultado = %.2f", resultado);
         
+    }
+    else if (opcao = 3){
+        resultado = a * b;
+        printf("resultado = %.2f", resultado);
+    }
+    else if (opcao = 4){
+        if (b != 0){
+            resultado = a / b;
+            printf("resultado = %.2f", resultado);
+        } else{
+            printf("numero divido por 0 = erro");
+        }
+    } else {
+        printf("operacao invalida");
     }
     
     return 0;
